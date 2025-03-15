@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Personal Fitness Tracker</title>
+    
+
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Fitness Tracker</h1>
+        <form action="/add-workout" method="POST">
+            <label for="workoutType">Workout Type:</label>
+            <select name="workoutType" id="workoutType" required>
+                <option value="Running">Running</option>
+                <option value="Weightlifting">Weightlifting</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" name="duration" id="duration" required>
+
+            <label>Intensity Level:</label>
+            <input type="radio" name="intensity" value="Low" required> Low
+            <input type="radio" name="intensity" value="Medium"> Medium
+            <input type="radio" name="intensity" value="High"> High
+
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" required>
+
+            <label for="notes">Notes:</label>
+            <textarea name="notes" id="notes" placeholder="Any additional comments..."></textarea>
+
+            <button type="submit">Submit Workout</button>
+        </form>
+
+        <a class="summary-link" href="/summary">View Workout Summary</a>
+    </div>
+</body>
+</html>
